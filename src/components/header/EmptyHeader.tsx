@@ -1,6 +1,6 @@
 import { Box, Toolbar, Typography } from '@mui/material';
 
-import LogoWithText from 'assets/logoWithText.svg?react';
+import logoPath from 'assets/logo.png';
 
 import { Container } from '../container/Container';
 import { LanguageSwitcher } from '../language-switcher/LanguageSwitcher';
@@ -16,7 +16,8 @@ export const EmptyHeader = () => (
           <Box className={styles.leftSide}>
             <Typography variant="h6" component="div">
               <a href="/" className={styles.logoLink}>
-                <LogoWithText width={86} height={20} />
+                <img src={logoPath} alt="logo" />
+                KongSaga
               </a>
             </Typography>
           </Box>

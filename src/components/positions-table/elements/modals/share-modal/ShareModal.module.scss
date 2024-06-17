@@ -24,6 +24,15 @@
     height: 100%;
     width: 100%;
   }
+
+  .image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .statsContainer {
@@ -35,6 +44,13 @@
   padding: 40px;
   z-index: 1;
   white-space: nowrap;
+}
+
+.logoHolder {
+  display: flex;
+  align-items: center;
+  gap: 4 * $d8x-spacing;
+  font-size: 24px;
 }
 
 .titleBlock {

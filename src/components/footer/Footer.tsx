@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { GitHub, X } from '@mui/icons-material';
 import { Link, Typography } from '@mui/material';
 
-import Logo from 'assets/logo.svg?react';
+import logoPath from 'assets/logo.png';
 import MediumLogo from 'assets/social/medium.svg?react';
 import DiscordLogo from 'assets/social/discord.svg?react';
 import GitbookLogo from 'assets/social/gitbook.svg?react';
@@ -93,7 +93,7 @@ export const Footer = memo(() => {
             underline="none"
             className={styles.footerLogoWrapper}
           >
-            <Logo className={styles.footerLogo} />
+            <img src={logoPath} className={styles.footerLogo} alt="logo" />
           </Link>
         </div>
         <div className={styles.copyrightHolder}>

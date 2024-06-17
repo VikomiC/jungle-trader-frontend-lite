@@ -10,7 +10,7 @@ import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 
 import { wagmiConfig } from 'blockchain-api/wagmi/wagmiClient';
 import { LiFiWidgetModal } from 'components/li-fi-widget-modal/LiFiWidgetModal';
-import { StaticBackground } from 'components/static-background/StaticBackground';
+import { StaticJungleBackground } from 'components/static-jungle-background/StaticJungleBackground';
 import { ThemeApplier } from 'components/theme-applier/ThemeApplier';
 import { GeoBlockingProvider } from 'context/geo-blocking-context/GeoBlockingContext';
 import { UserWalletProvider } from 'context/user-wallet-context/UserWalletContext';
@@ -49,7 +49,7 @@ if (container) {
                         <UserWalletProvider>
                           <WebSocketContextProvider>
                             <BrowserRouter>
-                              <StaticBackground />
+                              <StaticJungleBackground />
                               <App />
                             </BrowserRouter>
 

@@ -12,15 +12,15 @@
   --d8x-color-text-sell: #ff4861;
   --d8x-color-background: #201b35;
   --d8x-color-background-page-rgb: 102, 74, 223;
-  --d8x-color-background-items: #171819;
-  --d8x-color-background-items-second: #fbf1ca;
+  --d8x-color-background-items: #171819ee;
+  --d8x-color-background-items-second: #2e2e2eee;
   --d8x-color-background-items-selected: rgba(102, 74, 223, 0.1);
-  --d8x-color-background-items-inactive: #2e2e2e;
-  --d8x-color-background-table-row: #2f4858;
+  --d8x-color-background-items-inactive: #2e2e2eee;
+  --d8x-color-background-table-row: #2f485899;
   --d8x-color-background-table: transparent;
   --d8x-color-background-loader: rgba(102, 74, 223, 0.1);
-  --d8x-color-background-buy-rgb: 8, 153, 129;
-  --d8x-color-background-sell-rgb: 242, 54, 69;
+  --d8x-color-background-buy-rgb: 0, 121, 103;
+  --d8x-color-background-sell-rgb: 255, 72, 97;
   --d8x-color-background-buy-inactive-rgb: 129, 129, 129;
   --d8x-color-border: #00a8bb;
   --d8x-color-icon: #7860e3;
@@ -38,12 +38,12 @@
   --d8x-color-background-header: var(--d8x-color-background-items);
   --d8x-color-background-icon: #252d3b;
   --d8x-color-background-order-block: var(--d8x-color-background-items);
-  --d8x-color-background-card-content: var(--d8x-color-background-items);
-  --d8x-color-background-order-block-bottom: #171819;
-  --d8x-color-background-table-holder: var(--d8x-color-background-items);
-  --d8x-color-background-table-header: var(--d8x-color-background-items);
+  --d8x-color-background-card-content: transparent;
+  --d8x-color-background-order-block-bottom: transparent;
+  --d8x-color-background-table-holder: transparent;
+  --d8x-color-background-table-header: transparent;
   --d8x-color-background-table-row-default: var(--d8x-color-background-table-row);
-  --d8x-color-background-table-even-row: var(--d8x-color-background-items);
+  --d8x-color-background-table-even-row: transparent;
   --d8x-color-text-table-header: #46484d;
   --d8x-color-text-table-cell: #fff;
   --d8x-color-action-icon: #0145ff;
@@ -65,12 +65,15 @@
   --d8x-color-text-order-option-hover: var(--d8x-color-action);
   --d8x-color-text-order-option-selected: var(--d8x-color-text-secondary);
   --d8x-color-background-modal: var(--d8x-color-background);
-  --d8x-color-background-order-block-info: #171819;
+  --d8x-color-background-order-block-info: transparent;
   --d8x-color-text-order-block-info: var(--d8x-color-text-main);
   --d8x-color-text-market-icon: var(--d8x-color-action);
   --d8x-color-background-pumpstation-overview: var(--d8x-color-action);
   --d8x-color-text-pumpstation-overview: #fff;
   --d8x-color-text-warning: #1c1c1c;
+
+  //--Project custom colors
+  --d8x-background-continues-color: #000217;
 
   //--Override colors for toastify
   --toastify-color-progress-success: #664adf;

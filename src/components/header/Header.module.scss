@@ -26,6 +26,9 @@
   justify-content: center;
   align-items: center;
   gap: 3 * $d8x-spacing;
+  line-height: 1;
+  color: var(--d8x-color-text-main);
+  text-decoration: none;
 }
 
 .betaTag {
@@ -169,7 +172,11 @@
 
 .logoLink {
   display: flex;
+  align-items: center;
+  gap: $d8x-spacing * 4;
   line-height: 1;
+  color: var(--d8x-color-text-main);
+  text-decoration: none;
 }
 
 .walletConnect {
