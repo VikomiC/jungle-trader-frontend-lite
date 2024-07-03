@@ -177,6 +177,10 @@
   line-height: 1;
   color: var(--d8x-color-text-main);
   text-decoration: none;
+
+  img {
+    margin-top: -20px;
+  }
 }
 
 .walletConnect {

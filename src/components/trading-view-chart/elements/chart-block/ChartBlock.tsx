@@ -45,7 +45,7 @@ export const ChartBlock = memo(({ width, candles, seriesRef, numberDigits }: Can
       }}
       layout={{
         background: {
-          color: getComputedStyle(document.documentElement).getPropertyValue('--d8x-color-background-items'),
+          color: 'transparent', // getComputedStyle(document.documentElement).getPropertyValue('--d8x-color-background-items'),
         },
         textColor: getComputedStyle(document.documentElement).getPropertyValue('--d8x-color-text-main'),
       }}

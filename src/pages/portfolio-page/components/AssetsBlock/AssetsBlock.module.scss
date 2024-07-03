@@ -4,9 +4,15 @@
   padding: 32px;
   flex: 1;
   background: var(--d8x-color-background-items);
+  background-image: url('images/stickers/sticker32.webp');
+  background-size: 300px;
+  background-position: 90% bottom;
+  background-repeat: no-repeat;
 
   @include media-tablet {
     border-radius: $d8x-border-radius;
+    background-size: 200px;
+    background-position: center bottom;
   }
 }
 

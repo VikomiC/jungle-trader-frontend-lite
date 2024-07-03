@@ -30,7 +30,7 @@ export const StaticJungleBackground = memo(() => {
     <div
       className={classnames(styles.root, { [styles.tablet]: isTablet && !isMobile, [styles.mobile]: isMobile })}
       style={{
-        backgroundImage: `url(images/backgrounds/${device}_${themeMode}.jpeg)`,
+        backgroundImage: `url(images/stickers/sticker08.webp),url(images/backgrounds/${device}_${themeMode}.jpeg)`,
       }}
     ></div>
   );

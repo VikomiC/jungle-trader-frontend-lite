@@ -24,6 +24,10 @@
   border-radius: 0 $d8x-border-radius $d8x-border-radius 0;
   overflow-x: auto;
   background-color: var(--d8x-color-background-items);
+  background-image: url('images/stickers/sticker37.webp');
+  background-size: 200px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 .loaderWrapper {

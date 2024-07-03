@@ -1,18 +1,18 @@
 @mixin dark-colors {
-  --d8x-color-action: #0145ff;
+  --d8x-color-action: #2660fd; //-- 0169ff
   --d8x-color-action-rgb: 1, 69, 255;
-  --d8x-color-action-secondary: #48bea2;
+  --d8x-color-action-secondary: #fffda3dd; //-- 48bea2 #003740
   --d8x-color-text-main: #fff;
   --d8x-color-text-highlight: #48bea2;
   --d8x-color-text-secondary: #f3f2f2;
   --d8x-color-text-label-one: #aaa;
   --d8x-color-text-label-two: #a4a4a4;
   --d8x-color-text-primarytab-inactive: #818181;
-  --d8x-color-text-buy: #007967;
+  --d8x-color-text-buy: #91d8c7; //-- 007967 91d8c7 48bea2
   --d8x-color-text-sell: #ff4861;
-  --d8x-color-background: #201b35;
+  --d8x-color-background: #071332; //-- 071332 201b35
   --d8x-color-background-page-rgb: 102, 74, 223;
-  --d8x-color-background-items: #171819ee;
+  --d8x-color-background-items: #071332ee; //-- #071332 171819ee
   --d8x-color-background-items-second: #2e2e2eee;
   --d8x-color-background-items-selected: rgba(102, 74, 223, 0.1);
   --d8x-color-background-items-inactive: #2e2e2eee;
@@ -35,7 +35,7 @@
   --d8x-meter-background-division-done: rgba(1, 69, 255, 1);
 
   //--Additional colors
-  --d8x-color-background-header: var(--d8x-color-background-items);
+  --d8x-color-background-header: #071332ee;
   --d8x-color-background-icon: #252d3b;
   --d8x-color-background-order-block: var(--d8x-color-background-items);
   --d8x-color-background-card-content: transparent;

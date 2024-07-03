@@ -8,7 +8,6 @@ import { useAccount, useReadContracts } from 'wagmi';
 import { Menu } from '@mui/icons-material';
 import { Button, Divider, Drawer, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material';
 
-import logoPath from 'assets/logo.png';
 import { Container } from 'components/container/Container';
 import { DepositModal } from 'components/deposit-modal/DepositModal';
 import { LanguageSwitcher } from 'components/language-switcher/LanguageSwitcher';
@@ -314,8 +313,7 @@ export const Header = memo(({ window }: HeaderPropsI) => {
         onClick={handleDrawerToggle}
         className={styles.drawerLogoHolder}
       >
-        <img src={logoPath} alt="logo" width={50} />
-        KongSaga
+        <img src="/images/stickers/sticker30.webp" alt="logo" width={80} />
       </Typography>
       <Divider />
       <nav className={styles.navMobileWrapper} onClick={handleDrawerToggle}>
@@ -360,8 +358,7 @@ export const Header = memo(({ window }: HeaderPropsI) => {
               <div className={styles.leftSide}>
                 <Typography variant="h6" component="div" className={styles.mainLogoHolder}>
                   <a href="/" className={styles.logoLink}>
-                    <img src={logoPath} alt="logo" width={50} />
-                    KongSaga
+                    <img src="/images/stickers/sticker30.webp" alt="logo" width={80} />
                   </a>
                 </Typography>
                 {!isSmallScreen && (
