@@ -4,7 +4,9 @@
   position: relative;
   flex: 1;
   padding: 10 * $d8x-spacing 8 * $d8x-spacing;
-  background-color: var(--d8x-color-background-items);
+
+  //-- Use transparent instead of var(--d8x-color-background-items)
+  background-color: transparent;
   border-radius: 0 $d8x-border-radius $d8x-border-radius 0;
   max-width: 400px;
 }

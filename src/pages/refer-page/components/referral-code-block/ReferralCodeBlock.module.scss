@@ -3,7 +3,9 @@
 .root {
   padding: 10 * $d8x-spacing 8 * $d8x-spacing;
   flex: 1;
-  background-color: var(--d8x-color-background-items);
+
+  //-- Use transparent instead of var(--d8x-color-background-items)
+  background-color: transparent;
 }
 
 .topSection {

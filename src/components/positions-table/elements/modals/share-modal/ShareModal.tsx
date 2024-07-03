@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { DownloadOutlined } from '@mui/icons-material';
 import { Button, DialogActions, DialogContent } from '@mui/material';
 
-import LogoWithText from 'assets/logoWithText.svg?react';
+import logoPath from 'assets/logo.png';
 import { Dialog } from 'components/dialog/Dialog';
 import { parseSymbol } from 'helpers/parseSymbol';
 import { MarginAccountWithAdditionalDataI } from 'types/types';
@@ -41,7 +41,7 @@ export const ShareModal = memo(({ isOpen, selectedPosition, closeModal }: ShareM
     const link = document.createElement('a');
 
     link.href = dataUrl;
-    link.download = 'd8x-position.jpg';
+    link.download = 'KongSaga-position.jpg';
 
     document.body.appendChild(link);
     link.click();
@@ -60,7 +60,9 @@ export const ShareModal = memo(({ isOpen, selectedPosition, closeModal }: ShareM
       <DialogContent className={styles.contentBlock}>
         <div ref={statsRef} className={styles.statsContainer}>
           <Background />
-          <LogoWithText width={129} height={30} />
+          <div className={styles.logoHolder}>
+            <img src={logoPath} alt="logo" width={80} />
+          </div>
           <div className={styles.titleBlock}>
             <span
               className={classnames({

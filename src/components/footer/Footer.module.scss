@@ -16,8 +16,20 @@
 
 .pythLogo {
   width: 56px;
-  color: var(--d8x-color-action);
+
+  //color: var(--d8x-color-action);
+  color: var(--d8x-color-footer-icon);
+  transition: color 300ms linear;
   margin: -0.15rem 0;
+
+  &:hover {
+    color: var(--d8x-color-footer-icon-hover);
+  }
+
+  svg {
+    //stylelint-disable-next-line color-function-notation
+    filter: drop-shadow(0 0 3px var(--d8x-color-footer-icon-shadow));
+  }
 }
 
 .iconsHolder {
@@ -35,29 +47,37 @@
 }
 
 .footerLink {
-  color: var(--d8x-color-action);
+  //color: var(--d8x-color-action);
+  color: var(--d8x-color-footer-icon);
+  text-shadow: 0 0 5px var(--d8x-color-footer-icon-shadow);
+  transition: color 300ms linear;
   cursor: pointer;
   margin: 1rem 0;
 
   &:hover {
-    color: var(--d8x-color-action);
+    //color: var(--d8x-color-action);
+    color: var(--d8x-color-footer-icon-hover);
     text-decoration: none;
   }
 }
 
 .footerSocialLogo {
-  color: var(--d8x-color-action);
+  //color: var(--d8x-color-action);
+  color: var(--d8x-color-footer-icon);
   transition: color 300ms linear;
   text-decoration: none;
   margin: 1rem 0;
   cursor: pointer;
 
   &:hover {
-    color: var(--d8x-color-text-main);
+    //color: var(--d8x-color-text-main);
+    color: var(--d8x-color-footer-icon-hover);
     text-decoration: none;
   }
 
   svg {
+    //stylelint-disable-next-line color-function-notation
+    filter: drop-shadow(0 0 3px var(--d8x-color-footer-icon-shadow));
     height: 24px;
     width: 24px;
   }
@@ -72,6 +92,11 @@
   text-align: center;
   padding-bottom: $d8x-spacing * 4;
   margin: 1rem 0;
+
+  .copyright {
+    color: var(--d8x-color-footer-icon);
+    text-shadow: 0 0 5px var(--d8x-color-footer-icon-shadow);
+  }
 }
 
 @media screen and ($d8x-breakpoint-max-sm) {

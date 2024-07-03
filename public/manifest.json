@@ -1,7 +1,7 @@
 {
-  "short_name": "D8X App",
-  "name": "D8X Exchange",
-  "description": "Institutional-grade Perpetual Futures on Polygon zkEVM",
+  "short_name": "KongSaga App",
+  "name": "KongSaga Exchange",
+  "description": "Institutional-grade Perpetual Futures",
   "iconPath": "safari-pinned-tab.svg",
   "icons": [
     {

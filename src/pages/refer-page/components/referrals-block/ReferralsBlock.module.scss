@@ -3,8 +3,14 @@
 .root {
   padding: 10 * $d8x-spacing 8 * $d8x-spacing;
   flex: 1;
-  background-color: var(--d8x-color-background-items);
+
+  //-- Use transparent instead of var(--d8x-color-background-items)
+  background-color: transparent;
   border-radius: 0 $d8x-border-radius $d8x-border-radius 0;
+  background-image: url('images/stickers/sticker19.webp');
+  background-size: 200px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 .buttonsContainer {
