@@ -523,23 +523,23 @@
       "pool-card": {
         "vault": "Vault",
         "yields": {
-          "title": "Yield sources",
+          "title": "Ertragsquellen",
           "trading-api": "Trading APY ({{percent}}%)",
-          "weeth-yield": "weETH Staking Yield",
-          "stusd-yield": "stUSD Yield",
-          "ether-fi-points": "Ether.fi Points",
-          "eigen-layer-points": "EigenLayer Points",
-          "d8x-points": "D8X Points"
+          "weeth-yield": "weETH Staking Yield ({{weethAPY}}%)",
+          "stusd-yield": "stUSD Yield ({{stUsdAPY}}%)",
+          "ether-fi-points": "Ether.fi Punkte",
+          "eigen-layer-points": "EigenLayer Punkte",
+          "d8x-points": "D8X Punkte"
         },
         "boosts": {
           "title": "Turtle Club boost",
-          "turtle-ether-fi-points": "Turtle Ether.fi Points",
-          "turtle-d8x-points": "Turtle D8X Points"
+          "turtle-ether-fi-points": "Turtle Ether.fi Punkte",
+          "turtle-d8x-points": "Turtle D8X Punkte"
         },
         "deposit-button": "Deposit"
       },
       "global-stats": {
-        "apy": "Allzeit-APY",
+        "apy": "Trading-APY",
         "tvl": "TVL",
         "price": "d{{poolSymbol}} Preis",
         "supply": "d{{poolSymbol}} Angebot"
@@ -739,6 +739,8 @@
     "amount-label": "Anzahl",
     "address-label": "Adresse",
     "deposit-gas": "Gas deponieren",
+    "swap-bridge": "Swap/Bridge",
+    "offramp-button": "Deposit from CEX",
     "max": "Max:",
     "copied": "Kopiert",
     "copy-error": "Beim Kopieren in die Zwischenablage ist ein Fehler aufgetreten",
@@ -888,7 +890,8 @@
       "title": "Einzahlen",
       "important-notice": {
         "full": "Wichtiger Hinweis: Senden Sie nur <bold>{{currencyName}}</bold> (Token-Adresse: <bold>{{currencyContractAddress}}</bold) an diese Adresse. Senden Sie nur über <bold>{{chainName}}</bold>.",
-        "1": "Wichtiger Hinweis: Senden Sie nur <bold>{{currencyName}}</bold>",
+        "0": "Wichtig: Sie haben One-Click Handel aktiviert. Senden sie NUR gas in ihr Delegiertenkonto und Sicherheitstokens in ihre normale Wallet.",
+        "1": "Senden Sie nur <bold>{{currencyName}}</bold>",
         "2": "(Token-Adresse: ",
         "3": ")",
         "4": "an diese Adresse. ",

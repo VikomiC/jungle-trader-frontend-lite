@@ -14,8 +14,9 @@ import { GasDepositChecker } from 'components/gas-deposit-checker/GasDepositChec
 import { InfoLabelBlock } from 'components/info-label-block/InfoLabelBlock';
 import { Separator } from 'components/separator/Separator';
 import { ToastContent } from 'components/toast-content/ToastContent';
+import { TooltipMobile } from 'components/tooltip-mobile/TooltipMobile';
 import { getTxnLink } from 'helpers/getTxnLink';
-import { selectedPoolAtom, traderAPIAtom } from 'store/pools.store';
+import { collateralToSettleConversionAtom, selectedPoolAtom, traderAPIAtom } from 'store/pools.store';
 import {
   dCurrencyPriceAtom,
   triggerUserStatsUpdateAtom,
@@ -30,6 +31,7 @@ import { isEnabledChain } from 'utils/isEnabledChain';
 import { Initiate } from './Initiate';
 
 import styles from './Action.module.scss';
+import classNames from 'classnames';
 
 interface WithdrawPropsI {
   withdrawOn: string;
@@ -54,6 +56,7 @@ export const Withdraw = memo(({ withdrawOn }: WithdrawPropsI) => {
   const dCurrencyPrice = useAtomValue(dCurrencyPriceAtom);
   const userAmount = useAtomValue(userAmountAtom);
   const withdrawals = useAtomValue(withdrawalsAtom);
+  const c2s = useAtomValue(collateralToSettleConversionAtom);
   const setTriggerWithdrawalsUpdate = useSetAtom(triggerWithdrawalsUpdateAtom);
   const setTriggerUserStatsUpdate = useSetAtom(triggerUserStatsUpdateAtom);
   const [hasOpenRequestOnChain, setWithrawalOnChain] = useAtom(withdrawalOnChainAtom);
@@ -253,7 +256,7 @@ export const Withdraw = memo(({ withdrawOn }: WithdrawPropsI) => {
           {t('pages.vault.withdraw.info1')}
         </Typography>
         <Typography variant="body2" className={styles.text}>
-          {t('pages.vault.withdraw.info2', { poolSymbol: selectedPool?.poolSymbol })}
+          {t('pages.vault.withdraw.info2', { poolSymbol: selectedPool?.settleSymbol })}
         </Typography>
       </Box>
       <Box className={styles.contentBlock}>
@@ -268,12 +271,31 @@ export const Withdraw = memo(({ withdrawOn }: WithdrawPropsI) => {
             title={
               <>
                 {!withdrawals.length && '2.'}{' '}
-                {t('pages.vault.withdraw.action.title', { poolSymbol: selectedPool?.poolSymbol })}
+                {t('pages.vault.withdraw.action.title', { poolSymbol: selectedPool?.settleSymbol })}
+                {chain?.id === 42161 && selectedPool?.poolSymbol === 'STUSD' && (
+                  <>
+                    {' '}
+                    <TooltipMobile
+                      tooltip={
+                        <span>
+                          In case Angle Protocol does not have sufficient USDC on the chain you are withdrawing your
+                          funds, funds are withdrawn in USDA. In this case you can bridge USDA with Angle to another
+                          chain and convert to{' '}
+                          <a href="https://app.angle.money/bridge/USDA" target="_blank" rel="noreferrer">
+                            USDC
+                          </a>
+                        </span>
+                      }
+                    >
+                      <span className={classNames(styles.tooltip)}>(or USDA)</span>
+                    </TooltipMobile>
+                  </>
+                )}
               </>
             }
             content={
               <Typography>
-                {t('pages.vault.withdraw.action.info1', { poolSymbol: selectedPool?.poolSymbol })}
+                {t('pages.vault.withdraw.action.info1', { poolSymbol: selectedPool?.settleSymbol })}
               </Typography>
             }
           />
@@ -288,7 +310,14 @@ export const Withdraw = memo(({ withdrawOn }: WithdrawPropsI) => {
           <Box className={styles.row}>
             <Typography variant="body2">{t('pages.vault.withdraw.action.receive')}</Typography>
             <Typography variant="body2">
-              <strong>{formatToCurrency(predictedAmount, selectedPool?.poolSymbol)}</strong>
+              <strong>
+                {predictedAmount === undefined || !selectedPool
+                  ? '-'
+                  : formatToCurrency(
+                      predictedAmount * (c2s.get(selectedPool.poolSymbol)?.value ?? 1),
+                      selectedPool.settleSymbol
+                    )}
+              </strong>
             </Typography>
           </Box>
         </Box>

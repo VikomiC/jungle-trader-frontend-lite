@@ -95,6 +95,8 @@ export const Header = memo(({ window }: HeaderPropsI) => {
   const poolTokenBalanceDefinedRef = useRef(false);
   const poolTokenBalanceRetriesCountRef = useRef(0);
 
+  // fetch the settle ccy fx -> save to atom
+
   const setExchangeInfo = useCallback(
     (data: ExchangeInfoI | null) => {
       if (!data) {
@@ -194,6 +196,7 @@ export const Header = memo(({ window }: HeaderPropsI) => {
           setExchangeInfo(data.data);
           retries = MAX_RETRIES;
         } catch (error) {
+          console.error(error);
           console.log(`ExchangeInfo attempt ${retries + 1} failed: ${error}`);
           retries++;
           if (retries === MAX_RETRIES) {
@@ -220,13 +223,13 @@ export const Header = memo(({ window }: HeaderPropsI) => {
     allowFailure: false,
     contracts: [
       {
-        address: selectedPool?.marginTokenAddr as Address,
+        address: selectedPool?.settleTokenAddr as Address,
         abi: erc20Abi,
         functionName: 'balanceOf',
         args: [address as Address],
       },
       {
-        address: selectedPool?.marginTokenAddr as Address,
+        address: selectedPool?.settleTokenAddr as Address,
         abi: erc20Abi,
         functionName: 'decimals',
       },
@@ -237,7 +240,7 @@ export const Header = memo(({ window }: HeaderPropsI) => {
         address &&
         traderAPI?.chainId === chainId &&
         isEnabledChain(chainId) &&
-        !!selectedPool?.marginTokenAddr &&
+        !!selectedPool?.settleTokenAddr &&
         isConnected &&
         !isReconnecting &&
         !isConnecting,
