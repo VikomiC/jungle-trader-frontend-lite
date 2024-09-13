@@ -29,6 +29,7 @@ export const proxyAddrAtom = atom<string | undefined>(undefined);
 export const perpetualStatisticsAtom = atom<PerpetualStatisticsI | null>(null);
 export const perpetualStaticInfoAtom = atom<PerpetualStaticInfoI | null>(null);
 export const newPositionRiskAtom = atom<MarginAccountI | null>(null);
+export const perpetualPriceAtom = atom<number | undefined>(undefined);
 export const collateralDepositAtom = atom(0);
 export const webSocketReadyAtom = atom(false);
 export const mainWsLatestMessageTimeAtom = atom(Date.now());
@@ -39,6 +40,7 @@ export const tradesHistoryAtom = atom<TradeHistoryI[]>([]);
 export const fundingListAtom = atom<FundingI[]>([]);
 export const triggerPositionsUpdateAtom = atom(true);
 export const triggerBalancesUpdateAtom = atom(true);
+export const executeScrollToTablesAtom = atom(false);
 
 const perpetualsStatsAtom = atom<Record<string, MarginAccountI>>({});
 export const allPerpetualStatisticsPrimitiveAtom = atom<Record<string, PerpetualStatisticsI>>({});
@@ -112,6 +114,21 @@ export const selectedPerpetualAtom = atom(
     set(selectedPerpetualIdAtom, perpetualId);
   }
 );
+
+export const selectedPerpetualDataAtom = atom((get) => {
+  const perpetuals = get(perpetualsAtom);
+  if (perpetuals.length === 0) {
+    return null;
+  }
+
+  const savedPerpetualId = get(selectedPerpetualIdAtom);
+  const foundPerpetual = perpetuals.find((perpetual) => perpetual.id === +savedPerpetualId);
+  if (foundPerpetual) {
+    return foundPerpetual;
+  }
+
+  return perpetuals[0];
+});
 
 export const positionsAtom = atom(
   (get) => {

@@ -10,7 +10,9 @@
   --d8x-color-text-primarytab-inactive: #a4a4a4;
   --d8x-color-text-buy: #399881; //-- 399881 007967
   --d8x-color-text-sell: #cc394d; //-- cc394d ff4861
+  --d8x-color-box-shadow: rgba(0, 0, 0, 0.1);
   --d8x-color-background: #fffed6; //-- fffed6 f8f8f8
+  --d8x-color-background-paper: #100612;
   --d8x-color-background-page-rgb: 102, 74, 223;
   --d8x-color-background-items: #f1eedaee; //-- f1eeda e6f4f1ee
   --d8x-color-background-items-second: #c2ce9eee;
@@ -25,6 +27,8 @@
   --d8x-color-border: #00a8bb;
   --d8x-color-icon: #664adf;
   --d8x-color-icon-second: #edd954;
+  --d8x-color-icon-theme: #666;
+  --d8x-color-icon-theme-active: #fff;
   --d8x-color-separator-border: #919d21;
   --d8x-color-input-border: #919d21;
   --d8x-color-logo-second: black;
@@ -39,6 +43,7 @@
   --d8x-color-background-icon: #edd954;
   --d8x-color-background-order-block: var(--d8x-color-background-items);
   --d8x-color-background-card-content: transparent;
+  --d8x-color-background-card-overlay: var(--d8x-color-background);
   --d8x-color-background-order-block-bottom: transparent;
   --d8x-color-background-table-holder: transparent;
   --d8x-color-background-table-header: transparent;
@@ -71,6 +76,90 @@
   --d8x-color-background-pumpstation-overview: var(--d8x-color-action);
   --d8x-color-text-pumpstation-overview: #fff;
   --d8x-color-text-warning: #1c1c1c;
+  --d8x-block-border-color: transparent;
+
+  //--Colors for Market select component and it elements
+  --d8x-market-select-border-color: transparent;
+  --d8x-market-select-border-color-hover: var(--d8x-color-action);
+  --d8x-market-select-currency-color: #6e6e6e;
+  --d8x-market-option-border-color: #e9e8e8;
+  --d8x-market-option-border-color-hover: var(--d8x-color-action);
+  --d8x-market-option-border-color-selected: var(--d8x-market-option-border-color-hover);
+
+  //--Colors for currency icons
+  --d8x-currency-icon-color: #e9e8e8;
+  --d8x-currency-icon-background-color: #fff;
+
+  //--Badges
+  --d8x-badge-crypto-color: #027bf5;
+  --d8x-badge-crypto-background: rgba(6, 107, 240, 0.1);
+  --d8x-badge-prediction-color: #6649df;
+  --d8x-badge-prediction-background: #e1e4fe;
+  --d8x-badge-fx-color: #23ba97;
+  --d8x-badge-fx-background: rgba(35, 186, 151, 0.1);
+  --d8x-badge-commodity-color: #1c1c1c;
+  --d8x-badge-commodity-background: #e9e8e8;
+
+  //--New design colors for modals
+  --d8x-modal-text-color: var(--d8x-color-text-main);
+  --d8x-modal-background-color: #fff;
+
+  //--New design colors for buttons
+  --d8x-button-primary-color: var(--d8x-color-text-secondary);
+  --d8x-button-primary-color-hover: var(--d8x-color-text-secondary);
+  --d8x-button-primary-color-selected: var(--d8x-button-primary-color-hover);
+  --d8x-button-primary-color-disabled: var(--d8x-color-text-secondary);
+  --d8x-button-primary-background: var(--d8x-color-background-primary);
+  --d8x-button-primary-background-hover: var(--d8x-color-background-primary-hover);
+  --d8x-button-primary-background-selected: var(--d8x-button-primary-background-hover);
+  --d8x-button-primary-background-disabled: var(--d8x-color-background-primary-disabled);
+  --d8x-button-primary-border-color: var(--d8x-color-action);
+  --d8x-button-primary-border-color-hover: var(--d8x-color-action);
+  --d8x-button-primary-border-color-selected: var(--d8x-button-primary-border-color-hover);
+  --d8x-button-primary-border-color-disabled: var(--d8x-color-action);
+  --d8x-button-secondary-color: var(--d8x-color-action);
+  --d8x-button-secondary-color-hover: var(--d8x-color-action);
+  --d8x-button-secondary-color-selected: var(--d8x-color-text-secondary);
+  --d8x-button-secondary-color-disabled: var(--d8x-button-secondary-color);
+  --d8x-button-secondary-background: #e1e4fe;
+  --d8x-button-secondary-background-hover: #e1e4fe;
+  --d8x-button-secondary-background-selected: var(--d8x-color-action);
+  --d8x-button-secondary-background-disabled: var(--d8x-color-background-items);
+  --d8x-button-secondary-border-color: #e1e4fe;
+  --d8x-button-secondary-border-color-hover: var(--d8x-color-action);
+  --d8x-button-secondary-border-color-selected: var(--d8x-button-secondary-border-color-hover);
+  --d8x-button-secondary-border-color-disabled: var(--d8x-color-action);
+  --d8x-button-select-color: #1c1c1c;
+  --d8x-button-select-color-hover: var(--d8x-button-select-color);
+  --d8x-button-select-color-selected: var(--d8x-button-select-color-hover);
+  --d8x-button-select-color-disabled: var(--d8x-button-select-color);
+  --d8x-button-select-background: #f8f8f8;
+  --d8x-button-select-background-hover: var(--d8x-button-select-background);
+  --d8x-button-select-background-selected: var(--d8x-button-select-background-hover);
+  --d8x-button-select-background-disabled: var(--d8x-button-select-background);
+  --d8x-button-select-border-color: #e9e8e8;
+  --d8x-button-select-border-color-hover: var(--d8x-button-select-border-color);
+  --d8x-button-select-border-color-selected: var(--d8x-button-select-border-color-hover);
+  --d8x-button-select-border-color-disabled: var(--d8x-button-select-border-color);
+  --d8x-button-outlined-color: var(--d8x-color-text-label-two);
+  --d8x-button-outlined-color-hover: var(--d8x-button-outlined-color);
+  --d8x-button-outlined-color-selected: var(--d8x-button-outlined-color-hover);
+  --d8x-button-outlined-color-disabled: var(--d8x-color-text-secondary);
+  --d8x-button-outlined-background: transparent;
+  --d8x-button-outlined-background-hover: transparent;
+  --d8x-button-outlined-background-selected: var(--d8x-button-outlined-background-hover);
+  --d8x-button-outlined-background-disabled: transparent;
+  --d8x-button-outlined-border-color: rgba(var(--d8x-color-action-rgb), 0.2);
+  --d8x-button-outlined-border-color-hover: var(--d8x-color-action);
+  --d8x-button-outlined-border-color-selected: var(--d8x-button-outlined-border-color-hover);
+  --d8x-button-outlined-border-color-disabled: transparent;
+  --d8x-slider-thumb-background: var(--d8x-color-background-items);
+  --d8x-slider-thumb-border-color: var(--d8x-color-action);
+
+  //--Toggle component colors
+  --d8x-toggle-background: var(--d8x-color-text-primarytab-inactive);
+  --d8x-toggle-background-active: var(--d8x-color-icon);
+  --d8x-toggle-handle-background: var(--d8x-color-background-paper);
 
   //--Project custom colors
   --d8x-background-continues-color: #f6fce0;
