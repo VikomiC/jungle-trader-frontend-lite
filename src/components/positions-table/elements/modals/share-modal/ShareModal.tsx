@@ -10,6 +10,7 @@ import { parseSymbol } from 'helpers/parseSymbol';
 import { collateralToSettleConversionAtom } from 'store/pools.store';
 import { MarginAccountWithAdditionalDataI } from 'types/types';
 import { formatToCurrency } from 'utils/formatToCurrency';
+import logoPath from 'assets/logo.png';
 
 import { Background } from './Background';
 

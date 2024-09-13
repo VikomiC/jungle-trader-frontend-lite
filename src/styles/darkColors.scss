@@ -11,10 +11,10 @@
   --d8x-color-text-buy: #91d8c7; //-- 007967 91d8c7 48bea2
   --d8x-color-text-sell: #ff4861;
   --d8x-color-box-shadow: rgba(102, 74, 223, 0.1);
-  --d8x-color-background: #071332; //-- 071332 201b35
+  --d8x-color-background: #0b0818; //-- 071332 201b35
   --d8x-color-background-paper: #100612;
   --d8x-color-background-page-rgb: 102, 74, 223;
-  --d8x-color-background-items: #071332ee; //-- #071332 171819ee
+  --d8x-color-background-items: #110e1dee; //-- #071332 171819ee
   --d8x-color-background-items-second: #2e2e2eee;
   --d8x-color-background-items-selected: rgba(102, 74, 223, 0.1);
   --d8x-color-background-items-inactive: #2e2e2eee;
@@ -39,7 +39,7 @@
   --d8x-meter-background-division-done: rgba(1, 69, 255, 1);
 
   //--Additional colors
-  --d8x-color-background-header: #071332ee;
+  --d8x-color-background-header: #110e1dee;
   --d8x-color-background-icon: #252d3b;
   --d8x-color-background-order-block: var(--d8x-color-background-items);
   --d8x-color-background-card-content: transparent;
@@ -123,7 +123,7 @@
   --d8x-button-secondary-color-disabled: var(--d8x-button-secondary-color);
   --d8x-button-secondary-background: #161123;
   --d8x-button-secondary-background-hover: #161123;
-  --d8x-button-secondary-background-selected: rgba(102, 73, 223, 1);
+  --d8x-button-secondary-background-selected: var(--d8x-button-primary-background);
   --d8x-button-secondary-background-disabled: var(--d8x-color-background-items);
   --d8x-button-secondary-border-color: rgba(225, 228, 254, 0.1);
   --d8x-button-secondary-border-color-hover: var(--d8x-color-action);

@@ -15,8 +15,8 @@
     font-weight: 500;
 
     &.selected {
-      color: var(--d8x-color-action);
-      background-color: var(--d8x-color-action-secondary);
+      color: var(--d8x-color-text-secondary);
+      background-color: var(--d8x-button-primary-background);
     }
   }
 }

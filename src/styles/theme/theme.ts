@@ -343,7 +343,7 @@ export const theme = createTheme({
             backgroundColor: 'transparent',
             color: 'var(--d8x-color-text-main)',
             ':hover': {
-              backgroundColor: 'var(--d8x-color-action-secondary)',
+              backgroundColor: 'var(--d8x-button-primary-background)',
             },
           },
         },
